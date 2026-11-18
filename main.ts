@@ -17,6 +17,11 @@ import { buildDossier } from './vendor/makefun-game.ts';
 const here = fileURLToPath(new URL('.', import.meta.url));
 const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
+// Fail loudly instead of handing in a half-empty output.
+for (const needed of ['game/index.html', 'game/src/main.js', 'screenshots/1-start.png']) {
+  if (!existsSync(join(here, needed))) throw new Error(`missing ${needed} beside main.ts`);
+}
+
 mkdirSync(out, { recursive: true });
 cpSync(join(here, 'game'), join(out, 'game'), { recursive: true });
 mkdirSync(join(out, 'screenshots'), { recursive: true });
