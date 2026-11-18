@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orbit Salvage</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <header>
+    <h1>ORBIT SALVAGE</h1>
+    <p class="tag">Collect the cargo. Dodge the rocks. Finish the contract.</p>
+  </header>
+  <canvas id="game" width="960" height="600"></canvas>
+  <div id="hud">
+    <span id="hud-score">SCORE 0 / 300</span>
+    <span id="hud-hull">HULL ♥♥♥</span>
+    <span id="hud-fuel">FUEL ▮▮▮▮▮▮▮▮▮▮</span>
+    <span id="hud-level">LEVEL 1</span>
+    <span id="hud-time">TIME 0:00</span>
+  </div>
+  <p id="help">Move: WASD or arrow keys &nbsp;·&nbsp; Pause: P &nbsp;·&nbsp; Sound: M &nbsp;·&nbsp; Restart: R</p>
+  <p id="about">An original game. No assets were borrowed: every pixel is drawn in code, every sound is
+  synthesised in the browser. Reach 300 points to complete the salvage contract before your
+  hull or your fuel runs out.</p>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
